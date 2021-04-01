@@ -1,11 +1,12 @@
 \documentclass[../main.tex]
 		
-		\begin{document}
-			\section{Predicate logic and Quantifiers}
+\begin{document}
+\section{Predicate logic and Quantifiers}
 	\begin{description}
 		\item[Task:] Understand enough predicate logic to make sense of quantified statements.
 		\item In predicate logic, propositions depend on variable x, y, z, so their truth value may change depending on which values these variables assume: $P(x), Q(x, y), R(x, y, z)$
 	\end{description}
+	Jargon: domain of discourse(domain)
 	
 	\subsection{Introduce quantifiers}
 	\subsubsection{$\exists$ existential quantifier}
@@ -20,24 +21,42 @@
 		\item[Definition:] $\forall xP(x)$ is true if $P(x)$ is true for all allowable values of $x$. It is false otherwise.
 	\end{description}
 	
-	\subsubsection{$\exists!$ for one and only one}
+	\subsubsection{$\exists!$ for one and only one: Uniqueness Quantifier}
 	\begin{description}
-		\item[Syntax:] $\exists! xP(x)$
+		\item[Syntax:] $\exists! xP(x) or \exists_{1}$
 		\item[Definition:] $\exists! xP(x)$ is true if $P(x)$ is true for exactly one value of $x$ and false for all often values of $x$; otherwise, $\exists! xP(x)$ is false.
 	\end{description}
 	
-	\subsection{Alternation of Quantifiers}
+	\subsubsection{Alternation of Quantifiers: Nested Quantifiers}
 	\begin{tabular}{lr}
 		$\forall x\exists y\forall z$ & $P(x, y, z)$ \\
 	\end{tabular}
 	~\\
 	\textbf{NB:} The order \underline{cannot} be exchanged as it might modify the truth values of the statement (think of examples with two quantifiers).
+	\begin{description}
+		\item[Example:]domain: real numbers, P(x,y):= x + y = y + x\newline$\forall x \forall yP(x,y) \equiv \forall y \forall xP(x,y) $ 
+	\end{description}
 	
-	\subsection{Negation of Quantifiers}
+	\subsubsection{Negation of Quantifiers}
 	\begin{tabular}{rcl}
 		$\lnot(\exists xP(x))$ & $\leftrightarrow$ & $\forall x\lnot P(x)$ \\
 		$\lnot(\forall xP(x))$ & $\leftrightarrow$ & $\exists x\lnot P(x)$ \\
 	\end{tabular}
+	\subsubsection{Precedence of Quantifiers}
+	The quantifiers $\forall$ and $\exists$ have higher precedence than all logical operators from propositional calculus.
+	$\forall xP(x) \vee Q(x) \equiv (\forall xP(x))\vee Q(x)\\$
+	When the domain of a quantifier if finite, quantified statements can be expressed using propositional logic.
+	\subsection{Binding variables}
+	\begin{description}
+		\item[bound:] A quantifier is used on a variable x, which we say x is $\textbf{bound}$
+		\item[free:] No quantifier or set bounds a variable, which we say x is $\textbf{free}$
+		\item[scope:] The part of a logical expression a quantifier is applied, which we say the part is the $\textbf{scope}$ of the quantifier
+		\item[Binding variables:] the same letter is often used of represent variables bound by different quantifiers with scopes that do $\textbf{not overlap}$.\\Substitution: $\exists(P(x)\wedge Q(x))\vee \forall yR(y) ~\stackrel{y\rightarrow x}{\longrightarrow}~ \exists(P(x)\wedge Q(x))\vee \forall xR(x)$ 
+	\end{description}
+	\subsection{Logical Equavalences Involving Quantifiers}
+	\begin{description}
+		\item[Distributive Law:] $\newline$ $\forall x(P(x)\wedge Q(x))\equiv \forall xP(x) \wedge \forall xQ(x)$ \newline$\exists x(P(x)\vee Q(x))\equiv\exists xP(x) \vee\exists xQ(x)$
+	\end{description}
 	
 
 \end{document}

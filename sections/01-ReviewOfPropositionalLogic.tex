@@ -59,7 +59,7 @@
 		\quad
 		\begin{tabular}{|c|c|c|}
 			\cline{1-3}
-			P & Q & P$\leftrightarrow$Q \\ \cline{1-3}
+			P & Q & P$\leftrightarrow$Q(biconditional) \\ \cline{1-3}
 			F & F & T \\ \cline{1-3}
 			F & T & F \\ \cline{1-3}
 			T & F & F \\ \cline{1-3}
@@ -84,7 +84,36 @@
 		\item[Less obvious:] One connective called the sheffer stroke P$\mid$Q (which stands for "not both P and Q" or "P nand Q") can be used to represent all of $\lnot$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$ since $\lnot$P $\leftrightarrow$ P$\mid$P and P $\lor$ Q $\leftrightarrow$ (P$\mid$P) $\mid$ (Q$\mid$Q).
 		\item[Recall] if P$\rightarrow$Q is a given implication, Q$\rightarrow$P is called the \underline{converse} or P$\rightarrow$Q. $\lnot$Q $\rightarrow$ $\lnot$P.
 	\end{description}
-	
+
+	\subsection{Logical Equivalences}
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[scale=0.4]{../Figure/pic1.png}
+		\caption{Logical Equivalences}
+		\end{figure} 
+	\begin{figure}[!bthp]
+		\begin{minipage}[t]{0.45\linewidth}
+		\centering
+		\includegraphics[scale=0.32]{../Figure/pic2.png}
+		\caption{Involving Conditional Statements}
+		\end{minipage}
+		\begin{minipage}[t]{0.45\linewidth}        
+		\hspace{2mm}
+		\includegraphics[scale=0.32]{../Figure/pic3.png}
+		\caption{Involving Biconditional Statements}
+		\end{minipage}
+	\end{figure}
+	\begin{description}
+		\item[De Morgan's Laws:]1.$\lnot (p\vee q) \equiv \lnot p \wedge \lnot q$ ~~~~~2.$\lnot (p\wedge q)\equiv \lnot p\vee \lnot q$ 
+	\end{description}
+
+	\subsubsection{Satisfiability}
+	\begin{description}
+		\item[satisfiable:]if there's an assignment of truth values to its variables that makes it true(tautology/contingency)
+		\item[unsatisfiable:]iff. the negation of a compound proposition is tautology
+		\item[solution:]an assignment makes a compound proposition true 
+	\end{description}
+
 	\subsection{Indirect Arguments/Proofs by Contradiction/Reductio as absurdum}
 	Based on the tautology (P$\rightarrow$Q) $\leftrightarrow$ ($\lnot$Q $\rightarrow$ $\lnot$P)
 	
