@@ -1,4 +1,15 @@
+[Forked]
+
+# Self-Paced
+
+Textbook: Discrete Mathematics and Its Applications 8th
+
+***
+[Original]
+
+
 # MA2C03 Discrete Mathematics
+
 These are a set of notes for the Trinity College Dublin's Discrete Mathematics module. They are not my own, and were just converted from handwritten format.
 
 About the module from the course handbook:

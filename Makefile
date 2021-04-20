@@ -1,4 +1,4 @@
-SRC = Discrete_Math_Notes.tex
+SRC = main.tex
 
 .PHONY: all
 all:
